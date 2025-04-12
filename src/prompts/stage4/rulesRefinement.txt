@@ -1,0 +1,13 @@
+The following generated .clinerules-code content failed validation. It MUST start *immediately* with the header "// .clinerules-code for [Project Name/Purpose]" (no introductory text or markdown fences) AND MUST include the "// Primary Tech Stack:" section. Please regenerate the content correctly based on the original project details, adhering strictly to these formatting rules.
+
+Invalid Output Attempt:
+---
+{{rawRulesResult}}
+---
+
+Original Project Details for Context:
+---
+{{structureResultMd}}
+---
+
+Respond ONLY with the corrected plain text content for the .clinerules-code file, starting directly with the required header.

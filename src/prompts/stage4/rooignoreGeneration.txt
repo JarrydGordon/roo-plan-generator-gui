@@ -1,0 +1,12 @@
+Generate the content for a .rooignore file suitable for the project described below.
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  Start the response *immediately* with `# .rooignore for [Project Name/Purpose]` using a suitable name/purpose based on the input. NO other text before this line.
+2.  Include common ignores like `.git/`, `node_modules/` (at the root), `.vscode/`, `.env`, logs, etc.
+3.  Include ignores specific to the technologies and project type identified in the input (e.g., Python's `__pycache__`, Node's `build/`/`dist/` folders, OS-specific files).
+4.  **MCP Server Consideration:** If the project structure includes directories for custom MCP servers (e.g., `mcp_servers/my_server/`), add ignores for their specific build artifacts or dependencies (e.g., `mcp_servers/*/node_modules/`, `mcp_servers/*/build/`).
+5.  Use `#` for all comments and section headers.
+6.  The entire output must be plain text suitable for a `.rooignore` file. NO MARKDOWN.
+
+**PROVIDED INPUT FOR THIS TASK (Analysis & Structure):**
+{{structureResultMd}}

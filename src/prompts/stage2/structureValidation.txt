@@ -1,0 +1,15 @@
+Review the following structured Markdown output.
+1. Does it contain ALL the required H2 sections in the correct order (Task Overview, Requirements, Deliverables, Constraints, Assessment, Guidelines)?
+2. Under "### Proposed Structure (JSON)", is there a valid JSON array within a \`\`\`json code block?
+3. Is the "--- CONCISE ONE-SHOT COMMAND BELOW ---" separator present?
+4. Is there a concise command paragraph after the separator?
+
+If ALL conditions are met, respond ONLY with "OK".
+If NOT, identify the specific issues and provide a corrected version of the entire structured output including the JSON and the concise command.
+
+Output to Review:
+---
+{{structureResultRaw}}
+---
+
+Respond ONLY with the corrected output OR the word "OK".

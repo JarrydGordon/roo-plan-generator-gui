@@ -1,0 +1,27 @@
+Review the 'Core Logic Outlines' provided below, considering the overall project analysis and structure. For each key file identified, generate detailed pseudocode or basic code snippets (using the identified primary language/framework if possible) that implement its core functionality.
+
+**CRITICAL REQUIREMENTS:**
+1.  Ensure the generated pseudocode/snippets are detailed enough to serve as a strong starting point for implementation.
+2.  Align the logic with the technical requirements, analysis, and overall project structure provided in the context.
+3.  Consider potential edge cases mentioned in the analysis.
+4.  **Tool & Task Assessment:** While refining each outline, consider the following:
+    *   **Tool Needs:** Does implementing this logic likely require interaction with external systems (e.g., web scraping/automation via `browser_action`, specific MCP tools if known)? If yes, briefly note the potential tool need alongside the pseudocode (e.g., `// Requires browser_action for login simulation`).
+    *   **Boomerang Task Suitability:** Does this component align with any "Potential Boomerang Task Candidates" identified in the context? Is it complex or self-contained enough to warrant delegation via `new_task`? If yes, note this (e.g., `// Potential Boomerang Task candidate`).
+    *   **Ambiguity Check:** Is the logic critically unclear even with the provided context? If yes, instead of generating vague pseudocode, state the ambiguity clearly and suggest it might require clarification (e.g., `// AMBIGUITY: Specific algorithm for recommendation unclear, may need followup question.`).
+5.  Output *only* the refined "### Core Logic Outlines" section content, **including the '### Core Logic Outlines' heading itself**.
+6.  Maintain the original list format (e.g., "- \`path/to/file.js\`:").
+7.  Present the pseudocode/snippets clearly, potentially using markdown code blocks below each file path (e.g., \`\`\`pseudocode\n...\n\`\`\`). Include any notes about tool needs, Boomerang suitability, or ambiguities as comments within or alongside the pseudocode/snippets. If no refinement or detailed snippet is needed for a file, simply list its path as before.
+
+**Project Analysis & Structure Context:**
+---
+{{analysisResult}}
+---
+{{structureContext}}
+---
+
+Core Logic Outlines to Refine:
+---
+ {{preliminaryOutlines}}
+ ---
+
+ Respond ONLY with the refined content for the '### Core Logic Outlines' section, including the heading and detailed pseudocode/snippets where applicable.

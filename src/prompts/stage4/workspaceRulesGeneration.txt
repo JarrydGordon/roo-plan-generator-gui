@@ -1,0 +1,19 @@
+Generate the content for a general workspace .clinerules file based on the project described below. Focus on broad, project-wide guidelines applicable across different modes, derived from the analysis.
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  Start the response *immediately* with `// General Workspace .clinerules for [Project Name/Purpose]` using a suitable name/purpose based on the input. NO other text before this line.
+2.  **Analyze Context:** Review the "Requirements", "Constraints", "Confidence Assessment", "Additional Context/Guidelines", and any "Agentic Capabilities & Workflow Considerations" identified in the provided input.
+3.  **Generate General Rules:** Based on the analysis, generate broad rules applicable project-wide. Examples:
+    *   General coding standards (e.g., commenting style, naming conventions if not covered by specific linters).
+    *   Documentation practices (e.g., required README sections, API documentation standards if applicable).
+    *   **Agentic Workflow Considerations:** If Boomerang Tasks are anticipated, include guidelines on subtask initiation or summarization. If custom MCP servers are involved, add rules for their management. If browser automation is part of the strategy, define general usage principles.
+    *   General testing principles (e.g., requirement for unit tests, integration test approach if mentioned).
+    *   Collaboration or workflow guidelines if mentioned (e.g., commit message formats).
+    *   Address any assumptions or areas needing clarification noted in the "Confidence Assessment".
+4.  **Structure:** Include relevant sections like `// General Coding Standards`, `// Documentation Guidelines`, `// Testing Principles`, `// Project Workflow`. If agentic workflow rules were generated, include them under a section titled `// Agentic Workflow Guidelines:`.
+5.  **Format:** Use `//` for all comments and section headers. The entire output must be plain text suitable for a `.clinerules` file. NO MARKDOWN. Avoid duplicating highly specific rules meant for `.clinerules-code`.
+
+**PROVIDED INPUT FOR THIS TASK (Analysis & Structure):**
+---
+{{structureResultMd}}
+---

@@ -1,0 +1,23 @@
+The following generated roo-plan.md content failed validation for the following reasons: {{planValidationIssues}}.
+
+Please regenerate the plan correctly based on the original project details and available mode slugs. Ensure it:
+1.  Starts with a Title and the Concise Goal.
+2.  Identifies the correct primary/entry-point mode from the available slugs and uses `<switch_mode>` in the first step.
+3.  Is structured into logical phases using Markdown headers.
+4.  Uses `<new_task>` correctly for delegation to appropriate modes.
+5.  Uses valid XML tags.
+6.  Includes valid, properly escaped JSON within each `<message>` tag, containing the required keys (`goal`, `contextSummary`, `detailedInstructions`, `toolNotes`, `completionCriteria`).
+
+Invalid Plan:
+---
+{{finalPlan}}
+---
+
+Original Project Details for Context:
+---
+{{structureResultMd}}
+---
+Available Mode Slugs: {{techSpecificSlugs}}
+---
+
+Respond ONLY with the corrected Markdown content for the roo-plan.md file.

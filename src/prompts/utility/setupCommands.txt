@@ -1,0 +1,31 @@
+Based on the following details of a newly generated project, suggest a sequence of shell commands for initial setup.
+
+**Project Directory:**
+{{directoryPath}}
+
+**Generated Artifacts (Root Level):**
+{{artifactList}}
+
+**Scaffolded Structure Summary (Top Level):**
+{{structureSummary}}
+
+**Instructions:**
+1.  Generate a list of likely useful setup commands for a user opening a terminal in the project directory.
+2.  Start with `cd "{{directoryPath}}"`.
+3.  Infer common setup steps based on the artifacts and structure (e.g., `npm install` if `package.json` exists, `pip install -r requirements.txt` if `requirements.txt` exists, `git init`, etc.). Consider other common project types (Python virtual environments, build steps, etc.).
+4.  Include a basic `git init && git add . && git commit -m "Initial commit from RooCodeGen"` sequence at the end, unless the context strongly suggests otherwise (e.g., if a `.git` directory was part of the scaffolded structure).
+5.  Format the output as a JSON array of strings, where each string is a single command.
+6.  Do NOT include any explanatory text, just the JSON array.
+
+Example Output Format:
+```json
+[
+  "cd \"/path/to/project\"",
+  "npm install",
+  "git init",
+  "git add .",
+  "git commit -m \"Initial commit from RooCodeGen\""
+]
+```
+
+Generate the JSON array of commands below:

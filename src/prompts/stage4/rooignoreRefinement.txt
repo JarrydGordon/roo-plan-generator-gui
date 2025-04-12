@@ -1,0 +1,13 @@
+The following generated .rooignore content failed validation. It might be missing the required header "# .rooignore for [Project Name/Purpose]". Please regenerate the content correctly based on the original project details. Ensure the output starts *immediately* with the header and includes relevant ignore patterns.
+
+Invalid Output:
+---
+{{rooignoreResult}}
+---
+
+Original Project Details for Context:
+---
+{{structureResultMd}}
+---
+
+Respond ONLY with the corrected plain text content for the .rooignore file.

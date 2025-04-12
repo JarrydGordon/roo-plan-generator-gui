@@ -1,0 +1,16 @@
+Generate the complete replacement system prompt content for the Roo Code mode "{{footgunTargetMode}}". This content will entirely replace the default system prompt for this mode in this specific project.
+
+**CONTEXT (Project Analysis & Structure):**
+{{structureResultMd}}
+
+**REASON FOR OVERRIDE (Inferred):**
+(The analysis suggested a need to override the default system prompt for "{{footgunTargetMode}}".)
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  Generate the raw text content that should be placed inside the `.roo/system-prompt-{{footgunTargetMode}}` file.
+2.  This content MUST define the mode's complete behavior, including its core role, personality, instructions, and potentially how it should use tools (as the default tool descriptions will be bypassed).
+3.  **Agentic Considerations:** Based on the project context and the intended overridden purpose of the `{{footgunTargetMode}}`, the generated system prompt should include specific instructions on *how* and *when* this mode should leverage agentic capabilities, if applicable. This might include:
+    *   Guidance on using `browser_action` for specific web interactions.
+    *   Instructions on utilizing relevant MCP tools (identified in the context).
+    *   Rules for initiating subtasks (`new_task`) if this mode is expected to delegate work.
+4.  The output MUST be ONLY the raw text content for the file. Do NOT include any introductory phrases, explanations, or markdown formatting outside the prompt content itself.

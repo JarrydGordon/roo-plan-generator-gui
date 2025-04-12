@@ -1,0 +1,37 @@
+Generate the content for a .roomodes file based on the project analysis and structure provided below. Create specific, well-defined modes for distinct roles or components identified.
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  The output MUST be a valid JSON object starting with `{` and ending with `}`.
+2.  The JSON object MUST contain a single top-level key `"customModes"` whose value is an array.
+3.  **Determine Primary Mode:** Based on the project complexity and nature, decide if a dedicated orchestrator/manager mode is beneficial.
+    *   If yes, define a primary mode (e.g., `project-manager`, `lead-developer`, or similar appropriate slug) responsible for initiating the plan and delegating tasks. This mode should typically have `["read", "new_task", "switch_mode"]` groups and instructions focused on coordination and delegation based on a plan.
+    *   If no (e.g., for a very simple, single-focus project), the first mode defined might be the primary implementation mode itself.
+4.  **Identify Specialized/Supporting Roles:** Analyze the project context (tech stack, components like frontend/backend/database, tasks like testing/docs, potential Boomerang candidates) and create specific modes for each distinct role or major component needed to support the primary mode or overall goal. Examples: "react-frontend-dev", "nodejs-api-dev", "database-manager", "test-engineer", "docs-writer".
+5.  **Define Each Mode:** For each identified role (excluding orchestrator), add a mode definition to the `"customModes"` array including:
+    *   `slug`: A unique, specific, lowercase, hyphenated identifier (e.g., "react-frontend-dev").
+    *   `name`: A clear, human-readable name (e.g., "React Frontend Developer").
+    *   `roleDefinition`: A concise description of the mode's specific focus and responsibilities within the project.
+    *   `groups`: An array of relevant tool groups. Start with `["read", "command"]`. Add the `"edit"` group if the role involves coding/writing. Consider adding `"browser_action"` or other tool groups if the context suggests they are relevant for this role.
+    *   `customInstructions`: **Detailed** instructions for the mode. Reference relevant parts of the project analysis/structure, mention specific files/directories the mode should focus on, and explicitly state adherence to `.clinerules-code` and general best practices. **Importantly, if the context (specifically the refined outlines from Stage 3) indicated potential needs for tools like `browser_action` or specific MCP tools relevant to this mode's role, include guidance on when and how to consider using them.**
+6.  **JSON String Escaping:** Pay **critical attention** to escaping special characters within all JSON string values (like `name`, `roleDefinition`, `customInstructions`). Double quotes `"` inside strings must be escaped as `\"`, backslashes `\` must be escaped as `\\`, and newlines should be represented as `\n`. Failure to escape correctly will result in invalid JSON.
+7.  **Refine Edit Permissions (Optional but Recommended):** For modes with the `"edit"` group, consider adding file restrictions if appropriate for the role. Use the format `["edit", { "fileRegex": "...", "description": "..." }]`. Use appropriate regex patterns (remember to double-escape backslashes in the JSON string, e.g., `"src/frontend/.*\\.js$"`). This helps keep modes focused.
+8.  **Fallback Mode:** If NO specific technology roles or components can be clearly identified from the analysis, define a suitable primary mode (like `project-manager` or `developer`) and potentially a single generic `"code"` mode if needed, with appropriate defaults. Avoid relying strictly on `project-orchestrator` if it doesn't fit.
+9.  **Output Format:** The entire response MUST be ONLY the valid JSON object described above. Start the response immediately with `{` and end it immediately with `}`. Do NOT include ANY introductory text, explanations, code fences (```json ... ```), or any other text outside the JSON structure itself.
+
+**Example of Correct JSON Syntax and Escaping (DO NOT include this example in your final output):**
+```json
+// {
+//   "slug": "example-mode",
+//   "name": "Example Mode",
+//   "roleDefinition": "This mode demonstrates correct JSON string escaping, including \"quotes\" and backslashes \\\\.",
+//   "groups": ["read", "edit"],
+//   "customInstructions": "Focus on file 'example.js'.\\nEnsure all strings are properly escaped according to JSON rules."
+// }
+```
+
+**PROVIDED INPUT FOR THIS TASK (Project Analysis & Structure):**
+---
+{{structureResultMd}}
+---
+
+Generate the JSON object now:

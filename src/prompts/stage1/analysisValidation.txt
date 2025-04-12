@@ -1,0 +1,16 @@
+Review the following project analysis. Verify the following:
+1.  **Presence of Sections:** Does the analysis include ALL of these specific bolded sections: **Core functionality and features**, **Technical requirements**, **User interaction patterns**, **Agentic Capabilities & Workflow Considerations**, **Potential challenges**, **Ambiguities and Clarifications**?
+2.  **Technical Requirements Check:** Does the **Technical requirements** section mention specific technologies (languages, frameworks, databases, APIs, libraries) OR explicitly state that none were specified/obvious? Does it consider MCP servers where relevant?
+3.  **Agentic Capabilities Check:** Does the **Agentic Capabilities & Workflow Considerations** section address potential use of Browser Use, MCP, and Boomerang Tasks, even if just to state they aren't applicable?
+4.  **Ambiguities Check:** Does the **Ambiguities and Clarifications** section list at least one ambiguity OR explicitly state that the description was clear?
+5.  **Overall Completeness:** Are there any glaring omissions or sections that are completely empty or nonsensical based *only* on the provided analysis text?
+
+If ALL checks pass and the analysis seems reasonable, respond ONLY with the word "OK".
+If ANY check fails or significant improvements are needed (e.g., missing sections, vague technical details where specifics could be inferred, missing ambiguity list, missing agentic considerations), provide a refined and complete version of the ENTIRE analysis addressing the issues. Do NOT just describe the issues; provide the improved analysis directly.
+
+Analysis to Review:
+---
+{{analysisResult}}
+---
+
+Respond ONLY with the refined analysis OR the word "OK".

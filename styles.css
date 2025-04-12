@@ -1,0 +1,106 @@
+/* styles.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
+}
+
+.container {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #34495e; /* Slightly lighter dark background for container */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ecf0f1; /* Light text for headings */
+}
+
+.input-section, .output-section {
+    margin-bottom: 20px;
+}
+
+.output-section {
+    display: none; /* Hide output section by default */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 98%; /* Adjust width slightly to prevent overflow */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #7f8c8d; /* Darker border */
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical; /* Allow vertical resizing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: #2c3e50; /* Dark background for textarea */
+    color: #ecf0f1; /* Light text */
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #3498db; /* Keep button color for contrast */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Keep hover effect */
+}
+
+button:disabled {
+    background-color: #7f8c8d; /* Darker disabled state */
+    color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#loading-indicator {
+    margin-top: 10px;
+    font-style: italic;
+    color: #bdc3c7; /* Lighter grey for dark mode */
+}
+
+.output-actions {
+    margin-top: 10px;
+}
+
+#config-files-info {
+    background-color: #2c3e50; /* Dark background */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #7f8c8d; /* Darker border */
+    color: #ecf0f1; /* Light text */
+}
+
+#config-files-info p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+#config-file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#config-file-list li {
+    margin-bottom: 3px;
+    font-family: monospace;
+}

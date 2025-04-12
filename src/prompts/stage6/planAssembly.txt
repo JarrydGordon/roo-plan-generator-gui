@@ -1,0 +1,27 @@
+Generate the content for a Roo Code execution plan (`roo-plan.md`) based on the project details and available mode slugs below.
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  **Valid Markdown:** The output MUST be valid Markdown suitable for a `roo-plan.md` file.
+2.  **Title & Goal:** Start with a title like `# Roo Code Execution Plan: [Short Project Description]` and include the concise project goal: `**Concise Goal:** {{conciseCommand}}`.
+3.  **Config Note:** Include a note about saving the generated config files (`.roomodes`, `.clinerules*`, etc.) first.
+4.  **Determine Entry Point:** Identify the primary mode intended to start the execution (this might be a manager/orchestrator mode, or the main implementation mode for simpler projects, likely the first mode defined in the context or one with delegation capabilities). The first numbered step MUST be a `<switch_mode>` to this primary mode's slug.
+5.  **Logical Phasing:** Structure the plan into logical phases using Markdown headers (e.g., `## Phase 1: Setup and Initialization`, `## Phase 2: Core Feature Implementation`, `## Phase 3: Testing and Refinement`). The number and nature of phases should reflect the project's complexity and the roles defined by the modes.
+6.  **Task Delegation:** Within the appropriate phases, create numbered steps for task delegation using the `<new_task>` tool.
+    *   Identify the correct *delegate* mode slug for each task based on the available modes and the task requirements. Use the slugs provided below.
+    *   The `<mode>` tag should contain the specific delegate mode slug.
+    *   The `<message>` tag MUST contain a valid, properly escaped JSON string. This JSON object MUST have the following top-level keys:
+        *   `goal`: (string) A clear goal for this specific subtask, aligned with the overall project plan and the mode's role.
+        *   `contextSummary`: (string) A concise summary of the relevant context. Include *key snippets* from the provided analysis markdown (especially refined outlines and requirements pertinent to this subtask). Avoid including excessively long sections.
+        *   `detailedInstructions`: (string) Specific, step-by-step instructions for the delegate mode. Use Markdown formatting (like bullet points or numbered lists) within the string for clarity. Include instructions on adhering to rules files (`.clinerules`, `.clinerules-code`).
+        *   `toolNotes`: (string) Explicitly list any relevant tool usage suggestions (e.g., `browser_action`, MCP tools) or ambiguity notes identified for this component during Stage 3 outline refinement. If applicable, provide brief guidance here or within `detailedInstructions` on how the delegate should address them. If none, use an empty string "".
+        *   `completionCriteria`: (string) Clear criteria for completing the task, including the instruction to use `attempt_completion` with a concise summary upon success.
+7.  **Fallback Handling:** If the list of available delegate mode slugs is empty, create a single fallback delegation step using a sensible default mode (like `"code"` or the primary mode if it's capable of implementation). The JSON message for this fallback should still follow the structure defined above.
+8.  **Numbering:** Ensure all steps are numbered sequentially throughout the plan.
+9.  **Conclusion:** Include a concluding note if appropriate (e.g., about the primary mode monitoring progress if delegation occurred).
+10. **XML/JSON Validity:** Ensure all XML tags (`<switch_mode>`, `<new_task>`, etc.) are correctly formatted and closed. Double-check that the content within EACH `<message>` tag is a valid, properly escaped JSON string conforming to the structure specified in point 6.
+
+**AVAILABLE MODE SLUGS FOR DELEGATION (Identify primary/entry-point vs. delegates):**
+{{techSpecificSlugs}}
+
+**PROVIDED INPUT FOR CONTEXT (Project Analysis & Structure):**
+{{structureResultMd}}

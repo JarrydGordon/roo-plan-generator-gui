@@ -1,0 +1,12 @@
+The previous attempt to generate a footgun system prompt for mode "{{footgunTargetMode}}" resulted in empty content. Please generate the complete replacement system prompt content again, ensuring it is not empty and defines the mode's behavior based on the project context.
+
+**CONTEXT (Project Analysis & Structure):**
+{{structureResultMd}}
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  Generate the raw text content for the `.roo/system-prompt-{{footgunTargetMode}}` file.
+2.  The content MUST NOT be empty.
+3.  It MUST define the mode's complete behavior.
+4.  Output ONLY the raw text content for the file.
+
+ Respond ONLY with the non-empty system prompt content.

@@ -1,0 +1,45 @@
+Your task is to analyze the following project description and identify key aspects that should be included in a one-shot prompt.
+
+Project Description:
+\`\`\`
+{{projectIdea}}
+\`\`\`
+
+Provide a comprehensive and detailed analysis **formatted as Markdown**, using the following required sections. Be specific and technical:
+
+**Core functionality and features:**
+- List and describe the main functionalities.
+- Identify core features and their purposes.
+- Specify any integration requirements (internal or external).
+- Identify key data entities or models involved.
+
+**Technical requirements:**
+- Required or suggested technologies and frameworks (languages, databases, libraries). **If not specified, suggest potential candidates with brief reasoning.**
+- System architecture considerations (e.g., MVC, Microservices, Serverless). Suggest potential patterns if applicable.
+- List any required external APIs, significant libraries (beyond standard language ones), or external data sources. **If none are obvious, state that explicitly.**
+- Performance requirements or considerations.
+- Security considerations (e.g., authentication, data privacy).
+- When listing external APIs, libraries, or data sources, consider if an existing MCP server could fulfill the need, or if creating a custom MCP server would be beneficial for accessing these resources agentically.
+
+**User interaction patterns:**
+- Describe end-user workflows and key journeys.
+- Specify high-level interface requirements or components.
+- Detail data input/output patterns.
+- Note key user experience considerations.
+- Consider if the *development agent* might need to interact with systems (e.g., using the `browser_action` tool for web UI testing/interaction) as part of the workflow.
+
+**Agentic Capabilities & Workflow Considerations:**
+- **Web Interaction/Automation:** Identify any parts of the project (e.g., testing, data gathering, UI interaction) that could benefit from browser automation using the `browser_action` tool.
+- **External Tool Integration (MCP):** List specific external services, APIs, local databases, filesystems, or CLIs required. Could existing MCP servers (like those for databases, Git, APIs) be used? Would a custom MCP server simplify interaction with any required resource?
+- **Task Orchestration (Boomerang Tasks):** Assess the project's complexity. Is it suitable for breaking down into subtasks using a Boomerang Task approach? If so, suggest potential subtasks and the specialized modes (e.g., `code`, `architect`, `debug`, `docs`) that might handle them effectively.
+
+**Potential challenges:**
+- Identify technical implementation challenges.
+- Note potential integration complexities.
+- List performance bottlenecks or considerations.
+- Highlight security concerns or requirements.
+
+**Ambiguities and Clarifications:**
+- Explicitly list any parts of the project description that are ambiguous or require assumptions to proceed. Clearly state the assumptions made.
+
+Aim for a thorough analysis that anticipates implementation needs and serves as a strong foundation for subsequent planning stages. Ensure the output is well-structured Markdown.

@@ -1,0 +1,101 @@
+CRITICAL REQUIREMENT: Your response MUST be formatted in Markdown and MUST contain ALL of the following H2 sections, in this exact order:
+
+## Task Overview
+## Requirements and Specifications
+## Expected Deliverables
+## Technical Constraints
+## Confidence Assessment
+## Additional Context/Guidelines
+
+Do NOT omit any sections or use variations of these titles.
+
+Original Description:
+{{projectIdea}}
+
+Analysis:
+{{analysisResult}}
+
+Format your response using the following structure:
+
+# Task Overview
+[Provide a clear, concise overview of the project requirements and goals based on the analysis]
+
+## Requirements and Specifications
+### Functional Requirements
+- [List functional requirements based on the analysis]
+### Technical Requirements
+- [List technical requirements based on the analysis]
+### Performance Requirements
+- [List performance requirements based on the analysis]
+
+ ## Expected Deliverables
+ ### Proposed Structure (JSON)
+ CRITICAL: Provide the list of proposed directories and files as a JSON array within a \`\`\`json code block below this heading.
+ **Instructions for Structure Generation:**
+ 1.  Analyze the identified 'Technology Stack' and project type from the analysis.
+ 2.  Generate a conventional and logical directory structure suitable for this type of project. Consider standard directories like \`src/\` (or \`app/\`), \`tests/\`, \`public/\`, \`docs/\`, \`config/\`, \`scripts/\` where appropriate based on the technology and scale.
+ 3.  Place common configuration files (like \`package.json\`, \`requirements.txt\`, \`.gitignore\`, \`.env.example\`, Dockerfile, configuration files) typically found at the root level, unless standard conventions for the specific framework dictate otherwise.
+ 4.  **MCP Consideration:** If the analysis identified the need for custom MCP servers or specific MCP configurations, include relevant directories (e.g., `mcp_servers/my_custom_server/`) or configuration file placeholders (e.g., `config/mcp_settings.json`) in the structure.
+ 5.  Each object in the JSON array must have a "type" ("dir" or "file") and a "path" (string).
+ 6.  Ensure file paths use forward slashes '/' and directories do NOT end with '/'.
+ Example:
+ \`\`\`json
+ [
+  { "type": "dir", "path": "src" },
+  { "type": "file", "path": "src/index.js" },
+  { "type": "file", "path": "src/styles.css" },
+  { "type": "dir", "path": "public" },
+  { "type": "file", "path": "public/index.html" },
+  { "type": "file", "path": "README.md" }
+]
+\`\`\`
+**REMINDER:** Place the JSON array *directly* inside a \`\`\`json code block below. Do not add any text between this line and the code block itself.
+ [Your JSON structure list here inside a json code block]
+
+ ### Potential Boomerang Task Candidates
+ - [Based on the 'Analysis' provided, identify any distinct, complex components or features (e.g., complex UI module, separate API integration, data processing pipeline, browser automation task) that might be suitable candidates for delegation to specialized modes using Boomerang Tasks later in the planning or execution phase. List them briefly with reasoning. If none seem obvious candidates, state "None identified at this stage."]
+
+ ### Core Logic Outlines
+ - [Include Core Logic Outlines (Pseudocode/High-Level) for key files/features here, referencing the file paths from the JSON structure above. **Browser Automation Consideration:** If the analysis identified potential uses for browser automation (`browser_action`), include high-level steps for these interactions in the relevant logic outlines (e.g., "Test login form submission via browser automation").]
+ ### Documentation
+- [List documentation requirements based on the analysis]
+### Testing Requirements
+- [List testing deliverables based on the analysis]
+
+## Technical Constraints
+### Technology Stack
+- [List required technologies based on the analysis]
+### Platform Requirements
+- [List platform specifications based on the analysis]
+ ### Integration Requirements
+ - [List integration requirements based on the analysis. **MCP Integration:** Explicitly mention any planned integrations with existing or custom MCP servers identified in the analysis.]
+
+ ## Confidence Assessment
+[Provide a brief assessment of the plan's readiness. Mention any assumptions made or areas needing further clarification.]
+
+## Additional Context/Guidelines
+### Development Standards
+- [List coding standards based on the analysis]
+### Best Practices
+- [List best practices based on the analysis]
+### Testing Approach
+- [List testing guidelines based on the analysis]
+
+CRITICAL: YOUR RESPONSE MUST INCLUDE THE FOLLOWING TWO PARTS:
+
+1. The detailed markdown sections above with ALL required headings and proper formatting.
+
+2. MANDATORY SEPARATOR AND CONCISE COMMAND:
+
+
+   You MUST include the exact separator line "--- CONCISE ONE-SHOT COMMAND BELOW ---" followed by a single-paragraph concise command.
+   DO NOT OMIT THIS SEPARATOR LINE OR THE CONCISE COMMAND.
+   FAILURE TO INCLUDE EITHER WILL RESULT IN AN ERROR.
+
+The concise command must be a single paragraph that captures:
+1. The primary goal/function of the project.
+2. Key technology requirements (e.g., language, main frameworks).
+3. Essential features or components to be built.
+4. Critical constraints or non-functional requirements (e.g., platform, performance target).
+
+Format the concise command as a single paragraph without bullet points. Example style: "Build a Rainbow Calculator SPA using React.js and math.js. Implement basic arithmetic operations with colorful animations, ensure mobile responsiveness, and maintain WCAG 2.1 AA accessibility standards."

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roo Plan Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Roo Plan Generator</h1>
+
+        <div class="input-section">
+            <label for="project-idea">Enter Project Idea:</label>
+            <textarea id="project-idea" rows="6" placeholder="Describe the project you want Roo Code to build..."></textarea>
+            <!-- Placeholder for potential advanced config button -->
+            <button id="generate-plan-btn">Generate Roo Code Plan</button>
+            <div id="loading-indicator" style="display: none;">Processing...</div>
+        </div>
+
+        <!-- Output section removed - Plan and files will be saved via dialog -->
+    </div>
+
+    <!-- Link to the renderer script -->
+    <script src="./renderer.js"></script>
+</body>
+</html>

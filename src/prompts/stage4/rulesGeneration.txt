@@ -1,0 +1,24 @@
+Generate the content for a mode-specific .clinerules-code file based on the provided project details below. Focus on rules directly applicable to the primary technologies and coding tasks.
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+1.  Start the response *immediately* with `// .clinerules-code for [Project Name/Purpose]` using a suitable name/purpose based on the input. NO other text before this line.
+2.  **Analyze Context:** Carefully examine the "Technical Requirements", "Technology Stack", "Integration Requirements", "Development Standards", "Best Practices", and "Testing Approach" sections in the provided input.
+3.  **Generate Specific Rules:** Based *only* on the identified technologies, standards, integrations, and approaches from the context, generate specific, actionable rules. Examples:
+    *   If React is identified, include rules for component structure, state management, or hook usage.
+    *   If Python/Flask is identified, include rules for imports, error handling, or specific Flask patterns.
+    *   **Agentic Considerations:** If MCP integrations are planned, include rules for interacting with `use_mcp_tool` or `access_mcp_resource` (e.g., error handling, parameter structuring). If browser automation (`browser_action`) might be invoked from code (e.g., tests), include relevant guidelines.
+    *   If a specific linter/formatter (e.g., ESLint, Prettier, Black) is implied or mentioned, reference its use.
+    *   If specific testing frameworks (e.g., Jest, Pytest) are mentioned, include relevant testing rules (naming, structure).
+4.  **Structure:**
+    *   Include a section explicitly titled `// Primary Tech Stack:` followed by the *specific* technologies identified in the context.
+    *   Include a section explicitly titled `// Coding Standards/Style Guide:` followed by the *specific* standards identified or inferred (e.g., "PEP 8", "Airbnb JavaScript Style Guide"). If none specified, state "// Coding Standards/Style Guide: Not specified in analysis".
+    *   Include a section explicitly titled `// Testing Framework/Approach:` followed by the *specific* framework/approach identified. If none specified, state "// Testing Framework/Approach: Not specified in analysis".
+    *   Include a section explicitly titled `// Integration Requirements:` followed by the *specific* integrations (APIs, MCP servers) identified. If none specified, state "// Integration Requirements: Not specified in analysis".
+    *   Add other sections (`// Key Libraries/Frameworks Rules`, `// General Guidelines`) containing the context-specific rules generated in step 3.
+    *   If agentic tool usage rules were generated, include them under a section titled `// Agentic Tool Usage Guidelines:`.
+5.  **Format:** Use `//` for all comments and section headers. The entire output must be plain text suitable for a `.clinerules-code` file. NO MARKDOWN.
+
+**PROVIDED INPUT FOR THIS TASK (Analysis & Structure):**
+---
+{{structureResultMd}}
+---

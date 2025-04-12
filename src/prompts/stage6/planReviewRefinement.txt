@@ -1,0 +1,26 @@
+Review the following generated Roo Code execution plan (`roo-plan.md`). Check for:
+1.  **Entry Point:** Does the plan start with a logical `<switch_mode>` to an appropriate primary/entry-point mode defined in the `.roomodes`?
+2.  **Logical Phasing & Flow:** Is the plan structured into logical phases using Markdown headers? Are the steps within and across phases ordered reasonably?
+3.  **Instruction Clarity:** Are the instructions within each `<message>` tag clear, actionable, and specific enough for the target delegate mode?
+4.  **Mode Alignment:** Does each `<new_task>` use a `<mode>` slug that exists in the provided `.roomodes` JSON? Is the assigned delegate mode appropriate for the task described in the message?
+5.  **Completeness:** Does the plan seem to cover the core requirements outlined in the project context?
+6.  **Correctness:** Are XML tags properly formatted? Is the JSON within `<message>` tags valid and does it contain the required keys (`goal`, `contextSummary`, `detailedInstructions`, `toolNotes`, `completionCriteria`)?
+
+If significant improvements are needed, provide the fully corrected and refined `roo-plan.md` content. If the plan is already good or only minor tweaks are needed, respond ONLY with the word "OK".
+
+**Generated Plan to Review:**
+---
+{{finalPlan}}
+---
+
+**Generated .roomodes for Mode Context:**
+---
+{{roomodesResult}}
+---
+
+**Overall Project Context (Analysis & Structure):**
+---
+{{structureResultMd}}
+---
+
+Respond ONLY with the refined plan content OR the word "OK".
